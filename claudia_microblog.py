@@ -30,4 +30,5 @@ def create_app():
         return render_template('claudia_microblog.html', entries=entries)
     return claudia_microblog
 
-
+if __name__ == '__main__':
+    create_app().run()
