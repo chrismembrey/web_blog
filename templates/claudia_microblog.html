@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0"/>
+    <link type="text/css" href="../static/css/claudia_microblog.css" rel="stylesheet"/>
+    <title>DiDi's Blog</title>
+</head>
+<body>
+<header class="navbar">
+    <div class="navbar__brand">
+           <img class="navbar__logo" src="../static/_GoodCleanFood_p178-edit.webp" alt="smoothie bowl image"/>DiDi's MicroBlog
+    </div>
+    <ul class="navbar__navigation">
+        <li class="navbar__navigation-item"><a class="navbar__link" href="#">Recent</a></li>
+        <li class="navbar__navigation-item"><a class="navbar__link" href="#">Calendar</a></li>
+        <li class="navbar__navigation-item"><a class="navbar__link" href="#">Photos</a></li>
+    </ul>
+
+</header>
+<main class="main">
+    <section>
+        <h1>Add new entry</h1>
+        <form class="form" method="post">
+            <p class="form__input">
+            <textarea class="form__textarea"id="new_blog_entry-id" name="new_blog_entry-name"></textarea>
+            </p>
+            <button class="form__button"type="submit">Submit</button>
+        </form>
+    </section>
+    <section>
+        <h1>Previous Posts</h1>
+
+        {% for entry in entries %}
+        <article class="entry">
+        <div>
+            <h2 class="entry__header">{{ entry['content'] | truncate(30, true) }}</h2>
+
+            {# the | above is a function that will be applied to the value before it, in th
+             case above, we have truncated the entry by 30 characters and true will add
+            3 dots at the end "..." #}
+
+            <time class="entry__date" datetime="{{ entry['date'] }}">• {{ entry['date'].strftime('%b %d') }}</time>
+        </div>
+        <p class="entry__contents">{{ entry['content'] }}</p>
+        </article>
+        {% endfor %}
+
+    </section>
+</main>
+</body>
+<footer class="footer">
+    <div class="footer__content">
+        <section class="footer__left">
+            <a id="footer__link" class="footer__item" href="#">Recent</a>
+            <p class="footer__item">Made</p>
+        </section>
+        <section class="footer__right">
+            <div class="footer__column">
+                <a id="footer__link" class="footer__item" href="#">Calendar</a>
+                <p class="footer__item">With</p>
+            </div>
+            <div class="footer__column">
+                <a id="footer__link" class="footer__item" href="#">Photos</a>
+                <p class="footer__item">♥</p>
+            </div>
+        </section>
+    </div>
+</footer>
+</html>

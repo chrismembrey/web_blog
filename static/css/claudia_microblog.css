@@ -1,0 +1,158 @@
+html {
+    font-family: "Tamil MN";
+    background-color: mistyrose;
+    color: darkgreen;
+}
+
+* , ::after, ::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.navbar {
+    max-width: 640px;
+    margin: 50px auto;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 24px;
+    color: inherit;
+}
+.navbar__brand {
+    display: flex;
+    align-items: center;
+    color: inherit;
+}
+
+
+.navbar__logo {
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+.navbar__navigation {
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar__navigation-item {
+    margin: 0px 10px;
+    list-style: none;
+    padding: 0px;
+    color: inherit;
+}
+
+.navbar__link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.navbar__link:hover {
+    color: #3cd0ff;
+}
+
+.main{
+    max-width: 450px;
+    padding: 0 20px;
+    margin: 0 auto;
+    color: inherit;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.form__input {
+    width: 100%;
+}
+
+.form__textarea {
+    width: inherit;
+    font-size: 18px;
+    font-family: inherit;
+    background-color: mistyrose;
+    border-color: darkgreen;
+    border-width: medium;
+    color: inherit;
+
+}
+
+.form__button {
+    background-color: inherit;
+    color: inherit;
+    font-family: inherit;
+    margin: 0px auto;
+    text-align: center;
+    display: block;
+
+}
+
+.form__button:hover {
+    background-color: #3cd0ff;
+    cursor: pointer;
+}
+
+.entry {
+    margin-top: 30px;
+}
+
+.entry__header {
+    display: inline;
+    margin-right: 2px;
+    font-size: 18px;
+}
+
+.entry__contents {
+    font-size: 15px;
+    line-height: 150%;
+    display: block;
+}
+
+.footer {
+    background-color: darkgreen;
+    color: mistyrose;
+    padding: 50px 0px;
+    margin-top: 50px;
+    font-size: 12px;
+    max-width: 100%;
+
+
+
+}
+
+.footer__content {
+    max-width: 640px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.footer__right {
+    display: flex;
+    flex-direction: row;
+    margin: 0 0px;
+}
+.footer__left{
+    margin-left: 100px;
+}
+
+.footer__item {
+    margin: 5px 50px;
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+}
+
+#footer__link:hover {
+    color: #3cd0ff;
+}
+
+
+
+

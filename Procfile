@@ -1,0 +1,1 @@
+web: gunicorn "claudia_microblog:create_app()"
