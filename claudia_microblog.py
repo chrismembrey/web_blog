@@ -9,7 +9,7 @@ def create_app():
 
 
 
-    @claudia_microblog.route('/claudia-walsh-blog/', methods = ["GET", "POST"]) # becuase we want the data to be recieved from the form at this endpoint we have to specify that this endpoint may get a post or get request
+    @claudia_microblog.route('/', methods = ["GET", "POST"]) # becuase we want the data to be recieved from the form at this endpoint we have to specify that this endpoint may get a post or get request
     def blog():
 
 
